@@ -4,17 +4,18 @@ import java.awt.*;
 
 public abstract class GeometricalObject implements GeometricalForm{
     //Variables
-    private int x, y;
+    private int x, y, height, width;
     private Color color;
-    private double area;
-    private double perimeter;
+    private double area, perimeter;
 
-    protected GeometricalObject(int x, int y, Color color, double area, double perimeter) {
+    protected GeometricalObject(int x, int y, int height, int width, Color color, double area, double perimeter) {
         this.x = x;
         this.y = y;
         this.color = color;
         this.area = area;
         this.perimeter = perimeter;
+        this.height = height;
+        this.width = width;
     }
 
     //Methods
@@ -50,6 +51,14 @@ public abstract class GeometricalObject implements GeometricalForm{
 
     public Color getColor() {
         return color;
+    }
+
+    public int getHeight() {
+        return height;
+    }
+
+    public int getWidth() {
+        return width;
     }
 
     public void move(int dx, int dy) {

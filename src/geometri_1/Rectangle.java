@@ -1,6 +1,6 @@
 package geometri;
 
-        import java.awt.*;
+import java.awt.*;
 
 public class Rectangle extends GeometricalObject {
 
