@@ -1,7 +1,10 @@
 package geometri;
-
 import java.awt.*;
 
+/**
+ * Abstract class to describe geometrical objects
+ * @author Niklas Jonsson
+ */
 public abstract class GeometricalObject implements GeometricalForm {
     //Variables
     private int x, y, height, width;
@@ -9,6 +12,16 @@ public abstract class GeometricalObject implements GeometricalForm {
     private double area;
     private double perimeter;
 
+    //Constructors
+    /**
+     * Creates a geometrical object defined by common parameters.
+     *
+     * @param x X-coordinate of the geometrical object (upper left corner)
+     * @param y Y-coordinate of the geometrical object (upper left corner)
+     * @param color The color of the geometrical object
+     * @param area The area of the geometrical object
+     * @param perimeter The perimeter of the geometrical object
+     */
     protected GeometricalObject(int x, int y, Color color, double area, double perimeter) {
 
     }
