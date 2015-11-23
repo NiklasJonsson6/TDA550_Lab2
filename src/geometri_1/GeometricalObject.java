@@ -4,11 +4,12 @@ import java.awt.*;
 /**
  * Abstract class to describe geometrical objects
  * @author Niklas Jonsson
+ *{@inheritDoc}
  */
 public abstract class GeometricalObject implements GeometricalForm {
     //Variables
     private int x, y, height, width;
-    private Color color;
+    private Color c;
     private double area;
     private double perimeter;
 
@@ -18,11 +19,11 @@ public abstract class GeometricalObject implements GeometricalForm {
      *
      * @param x X-coordinate of the geometrical object (upper left corner)
      * @param y Y-coordinate of the geometrical object (upper left corner)
-     * @param color The color of the geometrical object
+     * @param c The color of the geometrical object
      * @param area The area of the geometrical object
      * @param perimeter The perimeter of the geometrical object
      */
-    protected GeometricalObject(int x, int y, Color color, double area, double perimeter) {
+    protected GeometricalObject(int x, int y, Color c, double area, double perimeter) {
 
     }
 
