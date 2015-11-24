@@ -25,7 +25,11 @@ public abstract class GeometricalObject implements GeometricalForm
      * @param perimeter The perimeter of the geometrical object
      */
     protected GeometricalObject(int x, int y, Color c, double area, double perimeter) {
-
+        this.x = x;
+        this.y = y;
+        this.c = c;
+        this.area = area;
+        this.perimeter = perimeter;
     }
 
     //Methods
@@ -33,19 +37,47 @@ public abstract class GeometricalObject implements GeometricalForm
     /**
      * {@inheritDoc}
      */
-    public int compareTo(GeometricalForm f) {}
+    public int compareTo(GeometricalForm f) {
+        //If this and f are the same object
+        if (this == f) {
+            return 0;
+        }
+        //Compare area first
+        if (this.getArea() < f.getArea()) {
+            return -1;
+        }
+        if (this.getArea() > f.getArea()) {
+            return 1;
+        }
+        //Compare perimeter second
+        if (this.getPerimeter() < f.getPerimeter()) {
+            return -1;
+        }
+        if (this.getPerimeter() > f.getPerimeter()) {
+            return 1;
+        }
+        //Different objects, everything equal
+        return 0;
+    }
 
     /**
      * {@inheritDoc}
      */
     @Override
-    public boolean equals(Object o) {}
+    public boolean equals(Object o) {
+
+    }
 
     /**
      * {@inheritDoc}
      */
     @Override
-    public int hashCode() {}
+    public int hashCode() {
+        String hc = this.getClass() + " " + this.getColor() + " " + this.getArea()
+                + " " + this.getWidth() + " " + this.getHeight() + " " + this.getPerimeter();
+
+        return Integer.parseInt(hc);
+    }
 
     /**
      * {@inheritDoc}
