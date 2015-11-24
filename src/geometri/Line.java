@@ -2,16 +2,60 @@ package geometri;
 
 import java.awt.*;
 
+/**
+ * Class describing a line
+ * @author Niklas Jonsson and Daniel Hesslow
+ *{@inheritDoc}
+ */
 public class Line extends GeometricalObject {
-    private int x2, y2;
 
-    public Line(int x1, int y1, int x2, int y2, Color color) throws IllegalPositionException {
-        super(x1, y1, y1 - y2, x1 - x2, color, 0, Math.sqrt(Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2)));
-        this.x2 = x2;
-        this.y2 = y2;
+    //since we just save the height and the width plus the upper left corner
+    //our line can either go from the upper left to the bottom right corner
+    //or from the lower left to the upper right corner
+    //this boolean keeps track of that.
+    private boolean positiveInclination;
+
+    /**
+     * Creates a line
+     *
+     * @param x1 X-coordinate of the line's starting point
+     * @param y1 Y-coordinate of the line's starting point
+     * @param x2 X-coordinate of the line's ending point
+     * @param y2 Y-coordinate of the line's ending point
+     * @param c Color of the line
+     * @throws IllegalPositionException if any coordinate becomes negative
+     */
+    public Line(int x1, int y1, int x2, int y2, Color c) throws IllegalPositionException {}
+
+    /**
+     * Creates a line
+     *
+     * @param f1 The geometrical form to get the starting point from
+     * @param f2 The geometrical form to get the ending point from
+     * @param c Color of the line
+     */
+    public Line(GeometricalForm f1, GeometricalForm f2, Color c) {
+
     }
 
-    public Line(GeometricalForm f1, GeometricalForm f2, Color color) throws IllegalPositionException {
-        this(f1.getX(), f1.getY(), f2.getX(), f2.getY(), color);
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public void fill(Graphics g) {
+
     }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public boolean equals(Object o) {}
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public int hashCode(){}
 }

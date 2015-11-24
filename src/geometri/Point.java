@@ -1,9 +1,10 @@
 package geometri;
+
 import java.awt.*;
 
 /**
  * Class describing a point
- * @author Niklas Jonsson
+ * @author Niklas Jonsson and Daniel Hesslow
  *{@inheritDoc}
  */
 public class Point extends GeometricalObject {
@@ -30,8 +31,10 @@ public class Point extends GeometricalObject {
 
     }
 
-    @Override
-    public void fill(Graphics g) {
 
-    }
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public void fill(Graphics g) {}
 }

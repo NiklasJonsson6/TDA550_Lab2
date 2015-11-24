@@ -3,10 +3,11 @@ import java.awt.*;
 
 /**
  * Class describing a square
- * @author Niklas Jonsson
+ * @author Niklas Jonsson and Daniel Hesslow
  *{@inheritDoc}
  */
-public class Square extends GeometricalObject {
+public class Square extends Rectangle {
+
 
     /**
      * Creates a square
@@ -17,9 +18,7 @@ public class Square extends GeometricalObject {
      * @param c The color of the square
      * @throws IllegalPositionException if any coordinate becomes negative
      */
-    public Square(int x, int y, int side, Color c) throws IllegalPositionException {
-
-    }
+    public Square(int x, int y, int side, Color c) throws IllegalPositionException {}
 
     /**
      * Creates a square
@@ -28,12 +27,5 @@ public class Square extends GeometricalObject {
      * @param side Length of the square's side
      * @param c The color of the square
      */
-    public Square(GeometricalForm f, int side, Color c)n {
-
-    }
-
-    @Override
-    public void fill(Graphics g) {
-
-    }
+    public Square(GeometricalForm f, int side, Color c) {}
 }

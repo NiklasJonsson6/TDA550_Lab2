@@ -1,9 +1,10 @@
 package geometri;
+
 import java.awt.*;
 
 /**
  * Class describing a rectangle
- * @author Niklas Jonsson
+ * @author Niklas Jonsson and Daniel Hesslow
  *{@inheritDoc}
  */
 public class Rectangle extends GeometricalObject {
@@ -34,8 +35,10 @@ public class Rectangle extends GeometricalObject {
 
     }
 
-    @Override
-    public void fill(Graphics g) {
 
-    }
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public void fill(Graphics g) {}
 }

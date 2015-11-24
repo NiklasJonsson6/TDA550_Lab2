@@ -2,74 +2,107 @@ package geometri;
 
 import java.awt.*;
 
-public abstract class GeometricalObject implements GeometricalForm{
+/**
+ * Abstract class to describe geometrical objects
+ * @author Niklas Jonsson and Daniel Hesslow
+ *{@inheritDoc}
+ */
+public abstract class GeometricalObject implements GeometricalForm
+{
     //Variables
     private int x, y, height, width;
-    private Color color;
-    private double area, perimeter;
+    private Color c;
+    private double perimeter,area;
 
-    protected GeometricalObject(int x, int y, int height, int width, Color color, double area, double perimeter) {
-        this.x = x;
-        this.y = y;
-        this.color = color;
-        this.area = area;
-        this.perimeter = perimeter;
-        this.height = height;
-        this.width = width;
+    //Constructors
+    /**
+     * Creates a geometrical object defined by common parameters.
+     *
+     * @param x X-coordinate of the geometrical object (upper left corner)
+     * @param y Y-coordinate of the geometrical object (upper left corner)
+     * @param c The color of the geometrical object
+     * @param area The area of the geometrical object
+     * @param perimeter The perimeter of the geometrical object
+     */
+    protected GeometricalObject(int x, int y, Color c, double area, double perimeter) {
+
     }
 
     //Methods
-    public int compareTo(GeometricalForm f) {
-        return 0;
-    }
 
+    /**
+     * {@inheritDoc}
+     */
+    public int compareTo(GeometricalForm f) {}
+
+    /**
+     * {@inheritDoc}
+     */
     @Override
-    public boolean equals(Object o) {
-        return false;
-    }
+    public boolean equals(Object o) {}
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
-    public int hashCode() {
-        return 0;
-    }
+    public int hashCode() {}
 
+    /**
+     * {@inheritDoc}
+     */
+    @Override
     public int getX() {
-        return x;
+
     }
 
-    public int getY() {
-        return y;
-    }
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public int getY() {}
 
-    public int getArea() {
-        return (int)area;
-    }
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public Color getColor() {}
 
-    public int getPerimeter() {
-        return (int)perimeter;
-    }
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public int getArea() {}
 
-    public Color getColor() {
-        return color;
-    }
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public int getWidth() {}
 
-    public int getHeight() {
-        return height;
-    }
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public int getHeight(){}
 
-    public int getWidth() {
-        return width;
-    }
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public int getPerimeter(){}
 
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
     public void move(int dx, int dy) {
 
     }
 
-    public void place(int x, int y) {
-
-    }
-
-    public void fill(Graphics g) {
-
-    }
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public void place(int x, int y) {}
 }

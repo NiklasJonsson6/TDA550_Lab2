@@ -1,9 +1,10 @@
 package geometri;
+
 import java.awt.*;
 
 /**
  * Class describing an oval
- * @author Niklas Jonsson
+ * @author Niklas Jonsson and Daniel Hesslow
  *{@inheritDoc}
  */
 public class Oval extends GeometricalObject {
@@ -34,6 +35,9 @@ public class Oval extends GeometricalObject {
 
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public void fill(Graphics g) {
 
